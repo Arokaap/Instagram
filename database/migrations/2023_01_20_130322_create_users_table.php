@@ -16,15 +16,15 @@ return new class extends Migration
     if (!Schema::hasTable('users')) {
       Schema::create('users', function (Blueprint $table) {
         $table->increments('id');
-        $table->string('role', 20);
-        $table->string('name', 100);
-        $table->string('surname', 200);
-        $table->string('nick', 100);
-        $table->string('email', 255);
-        $table->string('password', 255);
-        $table->string('image', 255);
+        $table->string('role', 20)->nullable();
+        $table->string('name', 100)->nullable();
+        $table->string('surname', 200)->nullable();
+        $table->string('nick', 100)->nullable();
+        $table->string('email', 255)->nullable();
+        $table->string('password', 255)->nullable();
+        $table->string('image', 255)->nullable();
         $table->timestamps();
-        $table->string('remember_token', 255);
+        $table->string('remember_token', 255)->nullable();
         $table->engine = 'InnoDB';
         $table->charset = 'utf8';
         $table->collation = 'utf8_general_ci';
