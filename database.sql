@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS laravel_master;
 USE laravel_master;
 
---------------------- TABLA USERS -------------------
+-- TABLA USERS --
 CREATE TABLE IF NOT EXISTS users(
 id int(255) auto_increment not null,
 role varchar(20),
@@ -30,7 +30,7 @@ INSERT INTO users VALUES(NULL,'user','Manolo','Garcia','manologarcia','manolo@ma
 
 
 
---------------------- TABLA IMAGES -------------------
+-- TABLA IMAGES --
 CREATE TABLE IF NOT EXISTS images(
 id int(255) auto_increment not null,
 user_id int(255),
@@ -56,7 +56,7 @@ INSERT INTO images VALUES(NULL, 3, 'familia.jpg', 'descripcion de prueba 4', CUR
 
 
 
---------------------- TABLA COMMENTS -------------------
+-- TABLA COMMENTS --
 CREATE TABLE IF NOT EXISTS comments(
 id int(255) auto_increment not null,
 user_id int(255),
@@ -83,7 +83,7 @@ INSERT INTO comments VALUES(null,2,4,'Que bueno!!',CURTIME(),CURTIME());
 
 
 
---------------------- TABLA LIKES -------------------
+-- TABLA LIKES --
 CREATE TABLE IF NOT EXISTS likes(
 id int(255) auto_increment not null,
 user_id int(255),
@@ -110,5 +110,6 @@ INSERT INTO likes VALUES(NULL,2,1,CURTIME(),CURTIME());
 
 
 
---Reiniciar auto_increment:
---ALTER TABLE likes AUTO_INCREMENT = 1
+-- Reiniciar auto_increment: --
+-- ALTER TABLE likes AUTO_INCREMENT = 1 --
+
